@@ -1,0 +1,94 @@
+
+
+configuration {
+  font: "JetBrainsMono Nerd Font Medium 100";
+  terminal: "termite";
+  drun-display-format: "{icon}{name}";
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+  Background: #282a36;	
+/*  Background: #00000000;*/
+  CurrentLine: #44475a;	
+  Foreground: #f8f8f2;	
+  Comment: #6272a4;	
+  Cyan: #8be9fd;	
+  Green: #50fa7b;	
+  Orange: #ffb86c;	
+  Pink: #ff79c6;	
+  Purple: #bd93f9;
+  Red: #ff5555;
+  blue: #6272a4;
+  purple: #bd93f9;
+  cyan: #8be9fd;
+  yellog: #f1fa8c;
+  background-color: @Background;
+  text-color: @purple;
+}
+
+window {
+ height: 240px;
+ width: 500px;
+ border: 2px 1px 3px 1px;
+ /*border-radius: 5px;*/
+ border-color: @CurrentLine;
+ padding: 2% 2%;
+ location: 0;
+ x-offset: 0;
+ y-offset: 0;
+ 
+}
+
+mainbox {
+  children: [listview];
+  background-color: @Background;
+}
+
+inputbar {
+  background-color: @Background;
+  children: [prompt, entry];
+  padding: 1px 1px;
+
+}
+
+
+entry {
+  background-color: inherit;
+  padding: 10px;
+}
+
+prompt {
+  background-color: inherit;
+  padding: 12px;
+}
+
+listview {
+  scrollbar: false;
+
+}
+
+element {
+  orientation: vertical;
+  text-color: @Purple;
+  padding: 5px 5px;
+}
+
+element-icon {
+  orientation: vertical;
+  padding: 5px 5px;
+}
+
+element-text {
+  padding: 5px 5px;
+  text-color: inherit;
+  orientation: vertical;
+}
+
+element selected {
+  text-color: @Pink;
+}
+
